@@ -13,6 +13,7 @@
     </head>
     
     <body>
+	{% load static %}
         <!--login--> 
         <div id="login">
             <p style="text-align: right">
@@ -26,7 +27,7 @@
         <div id="header">
             <br />
             <p style="text-align: center;"> 
-                <img src="images/logo.png"
+                <img src="{% static 'images/logo.png' %}"
                 width="446"
                 height="80">
             </p>
@@ -50,8 +51,8 @@
         <!--functions--> 
         <div id="menu" style="background-color:#a19a9a19; text-align: center; clear:both;">
             <br />
-            <p style="text-align: center"><a href="digitconverter.html">进制转换器DigitConverter</a></p>
-            <p style="text-align: center"><a href="reaction.html">反应测试ReactionTest</a></p>
+            <p style="text-align: center"><a href="{% url 'digitconvert' %}">进制转换器DigitConverter</a></p>
+            <p style="text-align: center"><a href="{% url 'reactiontest' %}">反应测试ReactionTest</a></p>
             <p style="text-align: center; color: #de77a5;">持续更新中...</p>
             <br />
         </div>
