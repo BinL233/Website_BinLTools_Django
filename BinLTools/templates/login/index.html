@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试登录页面</title>
+	<style>
+	body{
+		background-color: #FFF1F1;
+	}
+
+	.title{
+		font-size:30px;
+		text-align:center;
+	}
+	.biao{
+		margin-top:20px;
+		font-size:20px;
+		text-align:center;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<div class='login'>
+			<div class='title'>欢迎登录</div>
+			<div class='biao'>
+				<form action="/login" method='post'>
+					<label>用户：</label><input type="text" name='user'><br><br>
+					<label>密码：</label><input type="password" name='pwd'><br>
+					<input type="submit" value='登录' style='width:240px;height:30px;margin-top:25px;background:#ffffff'>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

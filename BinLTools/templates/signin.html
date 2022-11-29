@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>SQL数据查询</title>
+</head>
+<body>
+<script >
+	var conn = new ActiveXObject("ADODB.Connection"); //创建连接对象
+	conn.Open("Driver={SQL Server};SERVER=localhost;Trusted_Connection=SSPI;DATABASE=test"); //打开数据库
+	//conn.Open("Driver={SQL server};Server=.;DataBase=testdb;UID=sa;Password=0.;"); //打开数据库
+	//这两种链接都可以，但上面那种较佳，任何登录名都可以
+	var rs = conn.Execute("select * from test1");
+	//var rs = new ActiveXObject("ADODB.Recordset");
+	//rs.open("select * from stu", conn);
+	//这两种查询数据库的方法都可以，但上面那种更简洁
+	var count = rs.Fields.Count; //获取字段数
+	if(!rs.EOF){
+		document.write("<table><tr>");
+		for (var i=0; i < count; i++){
+			document.write("<th>" + rs.Fields(i).Name + "</th>");
+		}
+		document.write("</tr>");
+		while (!rs.EOF){
+			document.write("<tr>"); 
+			for (i=0; i <count; i++){
+				document.write("<td>" + rs.Fields(i).Value + "</td>");
+			}
+			document.write("</tr>");
+			rs.moveNext();
+		}
+		document.write("</table>");
+	}else{
+		document.write("数据库记录为空!<br>");
+	}
+	rs.close();
+	conn.close();
+</script>
+</body>
+</html>

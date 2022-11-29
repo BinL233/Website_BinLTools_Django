@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试登录页面</title>
+	<script>
+		function jump(){
+			location.href='../index.html';
+			}
+	</script> 
+	<style>
+	body{
+		background-color: #FFF1F1;
+	}
+
+	.title{
+		font-size:30px;
+		text-align:center;
+	}
+	.biao{
+		margin-top:20px;
+		font-size:20px;
+		text-align:center;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<div class='register'>
+			<div class='title'>欢迎注册</div>
+			<div class='biao'>
+				<form action="/register" method='post'>
+					<label>用户：</label><input type="text" name='user'><br><br>
+					<label>密码：</label><input type="password" name='pwd'><br>
+					<input type="submit" value='Sign up' style='width:240px;height:30px;margin-top:25px;background:#ffffff'>
+					<input type="button" value='Back' style='width:240px;height:30px;margin-top:25px;background:#ffffff' onclick='jump()' value = "Submit">
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

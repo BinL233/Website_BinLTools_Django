@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>反应测试ReactionTest</title>
+
+            <style type="text/css">
+                button{
+                    width: 550px;
+                    height: 350px;
+                    font-size:50px;
+                }
+                body{
+                    background-color: #FFF1F1;
+                }
+            </style>
+    </head>
+    <body>
+        <div id="Function">
+            <script>
+                var num = Math.ceil(Math.random()*8);
+                var flag=0;
+                var beginTime = 0;
+                var endTime = 0
+                function changeColor(){
+                    if(flag == 0){
+                        document.getElementById("reactionB").style.background="#41FF50";
+                        document.getElementById("reactionB").innerHTML="Wait...";
+                        setTimeout(function(){
+                            document.getElementById("reactionB").style.background="#FF245E";
+                            document.getElementById("reactionB").innerHTML="Click!";
+                            beginTime = +new Date();
+                        },num*1000+1000);
+                    }
+
+                    if(flag == 1){      
+                            endTime = +new Date();
+                            alert("Reaction Time: " + (endTime - beginTime) + " ms.");
+                            location.reload();
+                        }
+
+                    flag++;
+                }
+            </script>
+            <br />
+            <div id="title">
+                <p style="text-align: center;"><label style="font-size:50px;" for="number">Reaction Test</label></p>
+            </div>
+            <br />
+            <br />
+            <div id="button">
+                <!--<p style="text-align: center;" id="reactionB" onclick="changeColor()"><input style="width: 550px; height: 350px;" type = "button" id="reactionB" onclick="changeColor()"></p>-->
+                <p style="text-align: center;">
+                    <button onclick="changeColor()" id="reactionB">Click Here</button>
+                </p>
+            </div>
+            <br />
+            <br />
+            <div id="info">
+                <p style="text-align: center;"><label style="font-size:20px;" for="number">Click the button above. When the button turns red, click it again to know the response time.</label></p>
+            </div>
+        </div>
+    </body>

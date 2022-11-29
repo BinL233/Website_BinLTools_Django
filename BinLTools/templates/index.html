@@ -31,6 +31,18 @@
                 height="80">
             </p>
             <br />
+            <br />
+        </div>
+        <div id="Timer" style="text-align: center;">
+            <p id="Timer" style="color: #c7437ccd"></p>
+            <script>
+                var myVar=setInterval(function(){myTimer()},1);
+                function myTimer(){
+                    var d=new Date();
+                    var t=d.toLocaleTimeString();
+                    document.getElementById("Timer").innerHTML=t;
+                }
+            </script>
         </div>
         <br />
         <br />
@@ -38,8 +50,8 @@
         <!--functions--> 
         <div id="menu" style="background-color:#a19a9a19; text-align: center; clear:both;">
             <br />
-            <p style="text-align: center"><a href="youzi_password.html">柚柚の主页</a></p>
             <p style="text-align: center"><a href="digitconverter.html">进制转换器DigitConverter</a></p>
+            <p style="text-align: center"><a href="reaction.html">反应测试ReactionTest</a></p>
             <p style="text-align: center; color: #de77a5;">持续更新中...</p>
             <br />
         </div>
