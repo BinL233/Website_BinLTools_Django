@@ -23,20 +23,25 @@
                 var endTime = 0
                 function changeColor(){
                     if(flag == 0){
-                        document.getElementById("reactionB").style.background="#41FF50";
+                        document.getElementById("reactionB").style.background="#57F15C";
                         document.getElementById("reactionB").innerHTML="Wait...";
                         setTimeout(function(){
-                            document.getElementById("reactionB").style.background="#FF245E";
+                            document.getElementById("reactionB").style.background="#E0457B";
                             document.getElementById("reactionB").innerHTML="Click!";
                             beginTime = +new Date();
                         },num*1000+1000);
                     }
 
-                    if(flag == 1){      
+                    else if(flag == 1){      
                             endTime = +new Date();
-                            alert("Reaction Time: " + (endTime - beginTime) + " ms.");
-                            location.reload();
+                            document.getElementById("reactionB").style.background="#57F15C";
+                            document.getElementById("reactionB").innerHTML=((endTime - beginTime) + " ms");
+                            
                         }
+
+                    else if(flag == 2){
+                        location.reload();
+                    }
 
                     flag++;
                 }
