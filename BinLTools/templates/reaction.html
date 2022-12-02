@@ -6,13 +6,21 @@
 
             <style type="text/css">
                 button{
-                    width: 550px;
-                    height: 350px;
-                    font-size:50px;
+
+                    width: 600px;
+                    height: 400px;
+                    border-width: 0px;
+                    border-radius: 19px;
+                    cursor: pointer;
+                    outline: none; 
+                    color: white;
+                    background-color: #57F15C;
+                    font-family: 'Open Sans';
+                    font-size: 40px;
                 }
                 body{
                     background-color: #fffafa;
-                    font: 'Open Sans';
+                    font-family: 'Open Sans';
                 }
             </style>
     </head>
@@ -37,8 +45,7 @@
                     else if(flag == 1){      
                             endTime = +new Date();
                             document.getElementById("reactionB").style.background="#57F15C";
-                            document.getElementById("reactionB").innerHTML=((endTime - beginTime) + " ms");
-                            
+                            document.getElementById("reactionB").innerHTML=((endTime - beginTime) + " ms");           
                         }
 
                     else if(flag == 2){
@@ -50,7 +57,7 @@
             </script>
             <br />
             <div id="title">
-                <p style="text-align: center;"><label style="font-size:50px;" for="number">Reaction Test</label></p>
+                <p style="text-align: center;"><label style="font-size:50px; color: #1e9595; font-weight: bold;" for="number">Reaction Test</label></p>
             </div>
             <br />
             <br />
