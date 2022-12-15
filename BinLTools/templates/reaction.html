@@ -32,7 +32,13 @@
                 var beginTime = 0;
                 var endTime = 0
                 function changeColor(){
-                    if(flag == 0){
+                    if(flag == 1){      
+                            endTime = +new Date();
+                            document.getElementById("reactionB").style.background="#57F15C";
+                            document.getElementById("reactionB").innerHTML=((endTime - beginTime) + " ms");           
+                        }
+
+                    else if(flag == 0){
                         document.getElementById("reactionB").style.background="#57F15C";
                         document.getElementById("reactionB").innerHTML="Wait...";
                         setTimeout(function(){
@@ -41,12 +47,6 @@
                             beginTime = +new Date();
                         },num*1000+1000);
                     }
-
-                    else if(flag == 1){      
-                            endTime = +new Date();
-                            document.getElementById("reactionB").style.background="#57F15C";
-                            document.getElementById("reactionB").innerHTML=((endTime - beginTime) + " ms");           
-                        }
 
                     else if(flag == 2){
                         location.reload();
