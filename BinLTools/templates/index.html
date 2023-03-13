@@ -21,107 +21,8 @@
                 font-family: 'Open Sans';
             }
 
-            a[href*="github" i]{
-                display: block;
-                background-color: #25252510;
-                border-radius: 10px;
-                width: 200px;height: 60px;
-                position:absolute;
-                text-align: center;
-                line-height: 60px;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                margin: auto;
-                color: rgb(42, 165, 157);
-                font-size: 17px;
-                font-weight: bold;
-                text-decoration: none;
-                overflow: hidden;
-            }
-            
-            a span{
-                position: absolute;
-                display: block;
-                height: 5px;
-                width: 100%;
-                background-color: rgb(68,222,139);
-            }
-            
-            span:nth-child(1){
-                background: linear-gradient(90deg, transparent, #ff4242);
-                top: 0;
-                left: -200px;
-                animation: transverse 2s ease infinite;
-            }
-
-            span:nth-child(2){
-                width:5px;
-                height: 100%;
-                background: linear-gradient(180deg, transparent, #ff1fbf);
-                top: -60px;
-                left: 195px;
-                animation: vertical 2s ease infinite;
-                animation-delay: 0.5s;
-            }
-
-            span:nth-child(3){
-                background: linear-gradient(270deg, transparent, #f4ff1a);
-                bottom:0px;
-                right: -200px;
-                animation: transverse 2s ease infinite;
-                animation-delay: 1s;
-            }
-
-            span:nth-child(4){
-                width: 5px;
-                height: 100%;
-                background: linear-gradient(0deg, transparent, #1aff4c);
-                bottom: -60px;
-                right: 195x;
-                animation: vertical2 2s ease infinite;
-                animation-delay: 1.5s;
-            }
-
-            a:hover {
-                background: #03e8f465;
-                color: #050801;
-                box-shadow: 0 0 5px #03e8f465, 0 0 25px #03e8f465, 0 0 50px #03e8f465, 0 0 200px #03e8f465;
-
-            }
-
-            a:hover span{
-                animation-play-state: paused;
-                display: none;;
-            }
-
             li{
                 list-style: none;
-            }
-
-            @keyframes transverse{
-                0% {left: -200px;}
-                50%,
-                100% {left:200px;}
-            }
-
-            @keyframes transverse2{
-                0% {left: 200px;}
-                50%,
-                100% {left: -200px;}
-            } 
-            
-            @keyframes vertical{
-                0% {top: -60px;}
-                50%,
-                100% {top: 60px;}
-            }
-
-            @keyframes vertical2{
-                0% {top: 60px;}
-                50%,
-                100% {top: -60px;}
             }
 
         </style>
@@ -131,13 +32,18 @@
     <body>
 	{% load static %}
         <!--login--> 
-        <header class="navbar">    
-            <nav style="overflow: hidden;">
+        <header class="navbar" style="justify-content: space-between; display: flex;">
+            <nav class="left-nav" style="overflow: hidden;">
                 <ul>
-                  <li><a href="." style="color:#de77a5; text-decoration: none; font-size: 25px; font-weight: bolder;">BinLTools</a></li>
-                  <!-- <li><a href="https://github.com/BinL233" style="color:#0000009e; text-decoration: none; font-size: 20px; font-weight: bolder;">GitHub</a></li> -->
+                    <li><a href="." style="color:#de77a5; text-decoration: none; font-size: 25px; font-weight: bolder;">BinLTools</a></li>
                 </ul>
-              </nav>
+            </nav>
+
+            <nav class="right-nav" style="overflow: hidden; margin-right: 30px;">
+                <ul>
+                    <li><a href="https://github.com/BinL233" style="color:#0000009e; text-decoration: none; font-size: 20px; font-weight: bolder;">GitHub</a></li>
+                </ul>
+            </nav>
             <!-- <div id="login">
                 <p style="text-align: right">
                 <a href="./login/index.html">
@@ -150,7 +56,7 @@
         <br />
         <br />
         <!--logo--> 
-        <div id="header">
+        <div id="logo_main">
             <br />
             <p style="text-align: center;"> 
                 <img src="{% static 'images/logo.png' %}"
@@ -179,23 +85,7 @@
         <br />
         
         <div id="menu" style="background-color:#a19a9a19; text-align: center; clear:both;">
-            <br />
-            <div id="project">
-                <a href="https://github.com/BinL233/Website_BinLTools_Django">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    WEBSITE PROJECT
-                </a>
-            </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
             <!--functions--> 
-
             <div id="div menu">    
                 <br />
                 <p style="text-align: center"><a href="{% url 'digitconvert' %}" style="color:#1e9595; text-decoration: none; font-size: large;">进制转换器 DigitConverter</a></p>
