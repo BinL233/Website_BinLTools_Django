@@ -96,6 +96,10 @@
                 display: none;;
             }
 
+            li{
+                list-style: none;
+            }
+
             @keyframes transverse{
                 0% {left: -200px;}
                 50%,
@@ -128,9 +132,10 @@
 	{% load static %}
         <!--login--> 
         <header class="navbar">    
-            <nav>
+            <nav style="overflow: hidden;">
                 <ul>
-                  <a href="binltools.fun" style="color:#de77a5; text-decoration: none; font-size: 25px; font-weight: bolder;">BinLTools</a>
+                  <li><a href="#" style="color:#de77a5; text-decoration: none; font-size: 25px; font-weight: bolder;">BinLTools</a></li>
+                  <li><a href="https://github.com/BinL233" style="color:#0000009e; text-decoration: none; font-size: 20px; font-weight: bolder;">GitHub</a></li>
                 </ul>
               </nav>
             <!-- <div id="login">
