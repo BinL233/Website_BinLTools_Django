@@ -10,6 +10,12 @@
                 box-sizing: border-box;
             }
 
+            header{
+                border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+                height: 60px;
+                display: flex;
+            }
+
             body{
                 background-color: #fffafa;
                 font-family: 'Open Sans';
@@ -121,14 +127,21 @@
     <body>
 	{% load static %}
         <!--login--> 
-        <div id="login">
-            <p style="text-align: right">
-            <a href="./login/index.html">
-                <input style="width: 130px; height: 30px;" type = "button" onclick = "" value = "LOGIN">        
-            </a>
-            </p>
+        <header class="navbar">    
+            <nav>
+                <ul>
+                  <a href="binltools.fun" style="color:#de77a5; text-decoration: none; font-size: 25px; font-weight: bolder;">BinLTools</a>
+                </ul>
+              </nav>
+            <!-- <div id="login">
+                <p style="text-align: right">
+                <a href="./login/index.html">
+                    <input style="width: 130px; height: 30px;" type = "button" onclick = "" value = "LOGIN">        
+                </a>
+                </p>
+            </div> -->
 
-        </div>
+        </header>
         <!--logo--> 
         <div id="header">
             <br />
