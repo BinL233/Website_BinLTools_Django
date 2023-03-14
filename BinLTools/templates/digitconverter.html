@@ -21,17 +21,18 @@
     </head>
     
     <body>
+        {% load static %}
         <br />
         <div id="header">
             <p style="text-align: center;">
-                <img src="images/DigitConverter_logo.png"
+                <img src="{% static 'images/DigitConverter_logo.png' %}"
                 width="560"
                 height="167">
             </p>
         </div>
         <br />
         <div id="function">
-            <p style="text-align: center;"><label style="font-size:30px;" for="number">Decimal to Binary</label></p>
+            <p style="text-align: center;"><label style="font-size:30px; font-family: Open Sans;" for="number">Decimal to Binary</label></p>
             <p style="text-align: center;"><input style="width: 200px; height: 30px;" type="text" id="number" name="number" size="30"></p>
             <p style="text-align: center;"><input style="width: 150px; height: 50px;" type = "button" onclick = "ToBinary(2)" value = "Submit"></p>
             <p style="text-align: center; font-size: 30px;" id="ans"></p>
