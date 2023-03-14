@@ -71,10 +71,14 @@
             <p id="Timer" style="color: #c7437ccd"></p>
             <script>
                 var myVar=setInterval(function(){myTimer()},1);
+                var clock = document.getElementById("Timer")
                 function myTimer(){
                     var d=new Date();
                     var t=d.toLocaleTimeString();
-                    document.getElementById("Timer").innerHTML=t;
+                    clock.innerHTML=t;
+                    clock.style.color = "#c7437ccd"
+                    clock.style.fontWeight = "bold"
+                    clock.style.fontFamily = "Open Sans"
                 }
             </script>
         
