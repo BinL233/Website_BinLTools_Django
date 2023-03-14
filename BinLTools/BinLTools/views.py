@@ -25,4 +25,4 @@ def message_board(request):
         'form': form,
         'messages': messages,
     }
-    return render(request, 'index.html', context)
+    return render(request, 'message_board.html', context)

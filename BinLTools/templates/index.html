@@ -23,6 +23,8 @@
 
             li{
                 list-style: none;
+                display: inline-block;
+                margin-left: 30px;
             }
 
         </style>
@@ -41,6 +43,7 @@
 
             <nav class="right-nav" style="overflow: hidden; margin-right: 30px;">
                 <ul>
+                    <li><a href="{% url 'message_board' %}" style="color:#0000009e; text-decoration: none; font-size: 20px; font-weight: bold;">Message Board</a></li>
                     <li><a href="https://github.com/BinL233" style="color:#0000009e; text-decoration: none; font-size: 20px; font-weight: bold;">GitHub</a></li>
                 </ul>
             </nav>
@@ -97,26 +100,6 @@
                 <p style="text-align: center; color: #de77a5; font-size: large;">持续更新中...</p>
                 <br />
             </div>
-        </div>
-        <div id="message board">
-            <h1>Message Board</h1>
-            <form method="post">
-              {% csrf_token %}
-              {{ form.as_p }}
-              <button type="submit">Submit</button>
-            </form>
-            
-            {% if messages %}
-              <h2>Messages</h2>
-              <ul>
-                {% for message in messages %}
-                  <li>{{ message.name }} - {{ message.created_at }}</li>
-                  <p>{{ message.message }}</p>
-                {% endfor %}
-              </ul>
-            {% else %}
-              <p>No messages yet.</p>
-            {% endif %}
         </div>
     </body>
 </html>
