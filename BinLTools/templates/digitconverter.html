@@ -1,61 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-        <meta charset="utf-8">
-            <title>进制转换器DigitConverter</title>
-
-            <style>
-                header{
-                    border-bottom: 1px solid rgba(0, 0, 0, 0.22);
-                    height: 60px;
-                    display: flex;
-                }
-
-                body{
-                    background-color: #fffafa;
-                    font-family: 'Open Sans';
-                }
-
-                li{
-                    list-style: none;
-                    display: inline-block;
-                    margin-left: 30px;
-                }
-            </style>
-            <script>
-                function ToBinary(base){
-                    num = document.getElementById("number").value;
-                    var num = parseInt(num);
-                    document.getElementById("ans").innerHTML=num.toString(base);
-                    }
-             </script>
-    </head>
-    
+{% extends 'base.html' %}
+{% block title %}进制转换器DigitConverter{% endblock %}
+{% block content %}
     <body>
-        {% load static %}
-        <header class="navbar" style="justify-content: space-between; display: flex;">
-            <nav class="left-nav" style="overflow: hidden;">
-                <ul>
-                    <li><a href="{% url 'message_board' %}" style="color:#0000009e; text-decoration: none; font-size: 20px; font-weight: bold;">Message Board</a></li>
-                    <li><a href="http://binltools.fun" style="color:#de77a5; text-decoration: none; font-size: 25px; font-weight: bolder;">BinLTools</a></li>
-                </ul>
-            </nav>
-
-            <nav class="right-nav" style="overflow: hidden; margin-right: 30px;">
-                <ul>
-                    <li><a href="https://github.com/BinL233" style="color:#0000009e; text-decoration: none; font-size: 20px; font-weight: bold;">GitHub</a></li>
-                </ul>
-            </nav>
-            <!-- <div id="login">
-                <p style="text-align: right">
-                <a href="./login/index.html">
-                    <input style="width: 130px; height: 30px;" type = "button" onclick = "" value = "LOGIN">        
-                </a>
-                </p>
-            </div> -->
-
-        </header>
         <br />
         <br />
         <div id="logo_main">
@@ -73,4 +19,4 @@
             <p style="text-align: center; font-size: 30px;" id="ans"></p>
         </div>
     </body>
-</html>
+{% endblock %}

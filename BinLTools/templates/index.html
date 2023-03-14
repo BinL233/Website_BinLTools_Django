@@ -1,105 +1,49 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-        <meta charset="utf-8">
-            <title>BinLTools</title>
+{% extends 'base.html' %}
+{% block title %}Main{% endblock %}
+{% block content %}
+<body>
+    <!--logo--> 
+    <div id="logo_main">
+        <br />
+        <p style="text-align: center;"> 
+            <img src="{% static 'images/logo.png' %}"
+            width="446"
+            height="80">
+        </p>
+        <br />
+        <br />
+    </div>
 
-        <style>
-            *{
-                box-sizing: border-box;
+    <div id="Timer" style="text-align: center;">
+        <p id="Timer" style="color: #c7437ccd"></p>
+        <script>
+            var myVar=setInterval(function(){myTimer()},1);
+            var clock = document.getElementById("Timer")
+            function myTimer(){
+                var d=new Date();
+                var t=d.toLocaleTimeString();
+                clock.innerHTML=t;
+                clock.style.color = "#c7437ccd"
+                clock.style.fontWeight = "bold"
+                clock.style.fontFamily = "Open Sans"
             }
-
-            header{
-                border-bottom: 1px solid rgba(0, 0, 0, 0.22);
-                height: 60px;
-                display: flex;
-            }
-
-            body{
-                background-color: #fffafa;
-                font-family: 'Open Sans';
-            }
-
-            li{
-                list-style: none;
-                display: inline-block;
-                margin-left: 30px;
-            }
-
-        </style>
-        <link rel="stylesheet" herf="style.css">
-    </head>
+        </script>
     
-    <body>
-	{% load static %}
-        <!--login--> 
-        <header class="navbar" style="justify-content: space-between; display: flex;">
-            <nav class="left-nav" style="overflow: hidden;">
-                <ul>
-                    <li><a href="." style="color:#de77a5; text-decoration: none; font-size: 25px; font-weight: bolder;">BinLTools</a></li>
-                </ul>
-            </nav>
+    </div>
 
-            <nav class="right-nav" style="overflow: hidden; margin-right: 30px;">
-                <ul>
-                    <li><a href="" style="color:#0000009e; text-decoration: none; font-size: 20px; font-weight: bold;">Message Board</a></li>
-                    <li><a href="https://github.com/BinL233" style="color:#0000009e; text-decoration: none; font-size: 20px; font-weight: bold;">GitHub</a></li>
-                </ul>
-            </nav>
-            <!-- <div id="login">
-                <p style="text-align: right">
-                <a href="./login/index.html">
-                    <input style="width: 130px; height: 30px;" type = "button" onclick = "" value = "LOGIN">        
-                </a>
-                </p>
-            </div> -->
-
-        </header>
-        <br />
-        <br />
-        <!--logo--> 
-        <div id="logo_main">
+    <br />
+    <br />
+    <br />
+    
+    <div id="menu" style="background-color:#a19a9a19; text-align: center; clear:both;">
+        <!--functions--> 
+        <div id="div menu">    
             <br />
-            <p style="text-align: center;"> 
-                <img src="{% static 'images/logo.png' %}"
-                width="446"
-                height="80">
-            </p>
-            <br />
+            <p style="text-align: center"><a href="{% url 'digitconvert' %}" style="color:#1e9595; text-decoration: none; font-size: large;">进制转换器 DigitConverter</a></p>
+            <p style="text-align: center"><a href="{% url 'reactiontest' %}" style="color:#1e9595; text-decoration: none; font-size: large;">反应测试 ReactionTest</a></p>
+            <p style="text-align: center; color: #de77a5; font-size: large;">持续更新中...</p>
             <br />
         </div>
-
-        <div id="Timer" style="text-align: center;">
-            <p id="Timer" style="color: #c7437ccd"></p>
-            <script>
-                var myVar=setInterval(function(){myTimer()},1);
-                var clock = document.getElementById("Timer")
-                function myTimer(){
-                    var d=new Date();
-                    var t=d.toLocaleTimeString();
-                    clock.innerHTML=t;
-                    clock.style.color = "#c7437ccd"
-                    clock.style.fontWeight = "bold"
-                    clock.style.fontFamily = "Open Sans"
-                }
-            </script>
-        
-        </div>
-
-        <br />
-        <br />
-        <br />
-        
-        <div id="menu" style="background-color:#a19a9a19; text-align: center; clear:both;">
-            <!--functions--> 
-            <div id="div menu">    
-                <br />
-                <p style="text-align: center"><a href="{% url 'digitconvert' %}" style="color:#1e9595; text-decoration: none; font-size: large;">进制转换器 DigitConverter</a></p>
-                <p style="text-align: center"><a href="{% url 'reactiontest' %}" style="color:#1e9595; text-decoration: none; font-size: large;">反应测试 ReactionTest</a></p>
-                <p style="text-align: center; color: #de77a5; font-size: large;">持续更新中...</p>
-                <br />
-            </div>
-        </div>
-    </body>
-</html>
+    </div>
+</body>
+{% endblock %}

@@ -1,66 +1,6 @@
-<html>
-    <head>
-        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-        <meta charset="utf-8">
-            <title>反应测试ReactionTest</title>
-
-            <style type="text/css">
-                header{
-                    border-bottom: 1px solid rgba(0, 0, 0, 0.22);
-                    height: 60px;
-                    display: flex;
-                }
-
-                button{
-
-                    width: 600px;
-                    height: 400px;
-                    border-width: 0px;
-                    border-radius: 19px;
-                    cursor: pointer;
-                    outline: none; 
-                    color: white;
-                    background-color: #57F15C;
-                    font-family: 'Open Sans';
-                    font-size: 40px;
-                }
-                body{
-                    background-color: #fffafa;
-                    font-family: 'Open Sans';
-                }
-
-                li{
-                    list-style: none;
-                    display: inline-block;
-                    margin-left: 30px;
-                }
-            </style>
-    </head>
-    <body>
-        <header class="navbar" style="justify-content: space-between; display: flex;">
-            <nav class="left-nav" style="overflow: hidden;">
-                <ul>
-                    <li><a href="{% url 'message_board' %}" style="color:#0000009e; text-decoration: none; font-size: 20px; font-weight: bold;">Message Board</a></li>
-                    <li><a href="http://binltools.fun" style="color:#de77a5; text-decoration: none; font-size: 25px; font-weight: bolder;">BinLTools</a></li>
-                </ul>
-            </nav>
-
-            <nav class="right-nav" style="overflow: hidden; margin-right: 30px;">
-                <ul>
-                    <li><a href="https://github.com/BinL233" style="color:#0000009e; text-decoration: none; font-size: 20px; font-weight: bold;">GitHub</a></li>
-                </ul>
-            </nav>
-            <!-- <div id="login">
-                <p style="text-align: right">
-                <a href="./login/index.html">
-                    <input style="width: 130px; height: 30px;" type = "button" onclick = "" value = "LOGIN">        
-                </a>
-                </p>
-            </div> -->
-
-        </header>
-        <br />
-        <br />
+{% extends 'base.html' %}
+{% block title %}ReactionTest{% endblock %}
+{% block content %}
         <div id="Function">
             <script>
                 var num = Math.ceil(Math.random()*8);
@@ -110,3 +50,4 @@
             </div>
         </div>
     </body>
+{% endblock %}
