@@ -47,24 +47,21 @@
             </nav>
         </header>
         <div id="message board">
-            <h1>Message Board</h1>
-            <form method="post">
-              {% csrf_token %}
-              {{ form.as_p }}
-              <button type="submit">Submit</button>
-            </form>
-            
-            {% if messages %}
-              <h2>Messages</h2>
+            {% block content %}
+              <h2>留言板</h2>
+              <a href="{% url 'message_create' %}">创建留言</a>
               <ul>
                 {% for message in messages %}
-                  <li>{{ message.name }} - {{ message.created_at }}</li>
-                  <p>{{ message.message }}</p>
+                  <li>
+                    <h3>{{ message.title }}</h3>
+                    <p>{{ message.content }}</p>
+                    <small>发布于 {{ message.pub_date }}</small>
+                  </li>
+                {% empty %}
+                  <li>没有留言。</li>
                 {% endfor %}
               </ul>
-            {% else %}
-              <p>No messages yet.</p>
-            {% endif %}
+            {% endblock %}
         </div>
     </body>
 </html>

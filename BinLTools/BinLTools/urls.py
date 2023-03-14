@@ -22,5 +22,4 @@ urlpatterns = [
     path('', views.index),
     path('digitconvert/', views.digitconvert, name = 'digitconvert'),
     path('reactiontest/', views.reactiontest, name = 'reactiontest'),
-    path('message_board/', views.message_board, name= 'message_board'),
 ]
