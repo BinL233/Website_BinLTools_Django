@@ -5,6 +5,12 @@
             <title>反应测试ReactionTest</title>
 
             <style type="text/css">
+                header{
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+                    height: 60px;
+                    display: flex;
+                }
+                
                 button{
 
                     width: 600px;
@@ -25,6 +31,29 @@
             </style>
     </head>
     <body>
+        <header class="navbar" style="justify-content: space-between; display: flex;">
+            <nav class="left-nav" style="overflow: hidden;">
+                <ul>
+                    <li><a href="." style="color:#de77a5; text-decoration: none; font-size: 25px; font-weight: bolder;">BinLTools</a></li>
+                </ul>
+            </nav>
+
+            <nav class="right-nav" style="overflow: hidden; margin-right: 30px;">
+                <ul>
+                    <li><a href="https://github.com/BinL233" style="color:#0000009e; text-decoration: none; font-size: 20px; font-weight: bold;">GitHub</a></li>
+                </ul>
+            </nav>
+            <!-- <div id="login">
+                <p style="text-align: right">
+                <a href="./login/index.html">
+                    <input style="width: 130px; height: 30px;" type = "button" onclick = "" value = "LOGIN">        
+                </a>
+                </p>
+            </div> -->
+
+        </header>
+        <br />
+        <br />
         <div id="Function">
             <script>
                 var num = Math.ceil(Math.random()*8);
