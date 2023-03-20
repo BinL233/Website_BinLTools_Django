@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['localhost', '124.222.134.63', 'binltools.fun']
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
